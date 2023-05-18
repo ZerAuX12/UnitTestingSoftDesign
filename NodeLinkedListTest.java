@@ -67,6 +67,23 @@ class NodeLinkedListTest {
         assertEquals(0, list.getSize());
         assertEquals(null, list.getHead());
     }
+    @Test
+    public void shouldDoAll(){
+        NodeLinkedList list = new NodeLinkedList();
+        list.addToFront(5);
+        list.addToTail(10);
+        list.addToTail(15);
+        list.addToTail(20);
+        assertEquals(4, list.getSize());
+        assertEquals(20, list.getTail().getValue());
+        list.removeTail();
+        assertEquals(3,list.getSize());
+        assertEquals(15,list.getTail().getValue());
+        list.removeFromFront();
+        assertEquals(2,list.getSize());
+        assertEquals(10,list.getHead().getValue());
+
+    }
 
 
 }

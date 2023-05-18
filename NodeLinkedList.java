@@ -71,6 +71,19 @@ public class NodeLinkedList {
         return null;
 
     }
+    public Node getTail(){
+        Node node =head;
+        if(head!=null) {
+            for (int i = 0; i < size - 1; i++) {
+                node = node.getNext();
+            }
+            return node;
+        }
+        else{
+            return null;
+        }
+
+    }
     public int getSize(){
         return size;
     }
